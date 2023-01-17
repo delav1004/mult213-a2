@@ -37,10 +37,10 @@ for (let i = 0; i < data.pokemon.length; i++) {
     }
     // Pokemons
     html += `<div class="pokemon">
-    <p>${data.pokemon[i].num}<br> 
-    ${data.pokemon[i].name}<br>
-    <img src="${data.pokemon[i].img}"><br>
-    Type: ${data.pokemon[i].type}<br>
+    <p><h3>${data.pokemon[i].num} - ${data.pokemon[i].name}</h3><br>
+    <img src="${data.pokemon[i].img}"></p>
+    <div class="pokeInfo">
+    <p>Type: ${data.pokemon[i].type}<br>
     Height: ${data.pokemon[i].height}<br>
     Weight: ${data.pokemon[i].weight}<br>
     Candy: ${data.pokemon[i].candy}<br>
@@ -53,6 +53,7 @@ for (let i = 0; i < data.pokemon.length; i++) {
     Weaknesses: ${data.pokemon[i].weaknesses}<br>
     Next Evolution: ${data.pokemon[i].next_evolution}<br>
     </p>
+    </div>
     </div>`;
 }
 avgHeight = sumHeight/data.pokemon.length;
