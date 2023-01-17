@@ -57,14 +57,14 @@ for (let i = 0; i < data.pokemon.length; i++) {
 }
 avgHeight = sumHeight/data.pokemon.length;
 avgWeight = sumWeight/data.pokemon.length;
-calculations += `
+calculations += `<div class="stats">
 <p>Number of pokemons: ${data.pokemon.length}</p>
 <p>Tallest pokemon: ${tallestName} (${tallestValue})</p>
 <p>Smallest pokemon: ${smallestName} (${smallestValue})</p>
 <p>Average pokemon height: ${avgHeight};</p>
 <p>Average pokemon weight: ${avgWeight};</p>
 <p>Pokemon with the highest average spawns: ${highestAvgSpawnsName} (${highestAvgSpawnsValue})</p>
-`;
+</div>`;
 
 console.log(calculations);
 
