@@ -3,6 +3,8 @@ const output = document.getElementById("output");
 
 let tallestValue = data.pokemon[0].height;
 let tallestName = data.pokemon[0].name;
+let smallestValue = data.pokemon[0].height;
+let smallestName = data.pokemon[0].name;
 let sumHeight = 0;
 let avgHeight = 0;
 let sumWeight = 0;
@@ -14,6 +16,11 @@ for (let i = 0; i < data.pokemon.length; i++) {
     if (data.pokemon[i].height > tallestValue) {
         tallestValue = data.pokemon[i].height;
         tallestName = data.pokemon[i].name;
+    }
+    //Calculate the smallest pokemon
+    if (data.pokemon[i].height < smallestValue) {
+        smallestValue = data.pokemon[i].height;
+        smallestName = data.pokemon[i].name;
     }
     //Calculate average pokemon height
     let height = parseInt(data.pokemon[i].height);
@@ -46,6 +53,7 @@ avgWeight = sumWeight/data.pokemon.length;
 calculations += `
 <p>Number of pokemons: ${data.pokemon.length}</p>
 <p>Tallest pokemon: ${tallestName} (${tallestValue})</p>
+<p>Smallest pokemon: ${smallestName} (${smallestValue})</p>
 <p>Average pokemon height: ${avgHeight};</p>
 <p>Average pokemon weight: ${avgWeight};</p>
 `;
