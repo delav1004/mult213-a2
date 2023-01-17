@@ -1,9 +1,14 @@
 import data from './pokedex.json' assert { type: 'json' };
 const output = document.getElementById("output");
 
+let sumHeight = 0;
+let avgHeight = 0;
 let calculations = "";
 let html = "";
 for (let i = 0; i < data.pokemon.length; i++) {
+    //Calculate average pokemon height
+    let height = parseInt(data.pokemon[i].height);
+    sumHeight += height;
     // Pokemons
     html += `<div class="pokemon">
     <p>${data.pokemon[i].num}<br> 
@@ -24,8 +29,10 @@ for (let i = 0; i < data.pokemon.length; i++) {
     </p>
     </div>`;
 }
+avgHeight = sumHeight/data.pokemon.length;
 calculations += `
 <p>Number of pokemons: ${data.pokemon.length}</p>
+<p>Average pokemon height: ${avgHeight};</p>
 `;
 
 console.log(calculations);
