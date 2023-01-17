@@ -3,12 +3,17 @@ const output = document.getElementById("output");
 
 let sumHeight = 0;
 let avgHeight = 0;
+let sumWeight = 0;
+let avgWeight = 0;
 let calculations = "";
 let html = "";
 for (let i = 0; i < data.pokemon.length; i++) {
     //Calculate average pokemon height
     let height = parseInt(data.pokemon[i].height);
     sumHeight += height;
+    //Calculate average pokemon weight
+    let weight = parseInt(data.pokemon[i].weight);
+    sumWeight += weight;
     // Pokemons
     html += `<div class="pokemon">
     <p>${data.pokemon[i].num}<br> 
@@ -30,9 +35,11 @@ for (let i = 0; i < data.pokemon.length; i++) {
     </div>`;
 }
 avgHeight = sumHeight/data.pokemon.length;
+avgWeight = sumWeight/data.pokemon.length;
 calculations += `
 <p>Number of pokemons: ${data.pokemon.length}</p>
 <p>Average pokemon height: ${avgHeight};</p>
+<p>Average pokemon weight: ${avgWeight};</p>
 `;
 
 console.log(calculations);
