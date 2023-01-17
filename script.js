@@ -1,6 +1,7 @@
 import data from './pokedex.json' assert { type: 'json' };
 const output = document.getElementById("output");
 
+let calculations = "";
 let html = "";
 for (let i = 0; i < data.pokemon.length; i++) {
     // Pokemons
@@ -23,4 +24,10 @@ for (let i = 0; i < data.pokemon.length; i++) {
     </p>
     </div>`;
 }
-output.innerHTML = html;
+calculations += `
+<p>Number of pokemons: ${data.pokemon.length}</p>
+`;
+
+console.log(calculations);
+
+output.innerHTML = calculations + html;
