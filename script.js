@@ -9,6 +9,8 @@ let sumHeight = 0;
 let avgHeight = 0;
 let sumWeight = 0;
 let avgWeight = 0;
+let highestAvgSpawnsValue = data.pokemon[0].avg_spawns;
+let highestAvgSpawnsName = data.pokemon[0].name;
 let calculations = "";
 let html = "";
 for (let i = 0; i < data.pokemon.length; i++) {
@@ -28,6 +30,11 @@ for (let i = 0; i < data.pokemon.length; i++) {
     //Calculate average pokemon weight
     let weight = parseInt(data.pokemon[i].weight);
     sumWeight += weight;
+    //Calculate the pokemon with highest average spawns
+    if (data.pokemon[i].avg_spawns > highestAvgSpawnsValue) {
+        highestAvgSpawnsValue = data.pokemon[i].avg_spawns;
+        highestAvgSpawnsName = data.pokemon[i].name;
+    }
     // Pokemons
     html += `<div class="pokemon">
     <p>${data.pokemon[i].num}<br> 
@@ -56,6 +63,7 @@ calculations += `
 <p>Smallest pokemon: ${smallestName} (${smallestValue})</p>
 <p>Average pokemon height: ${avgHeight};</p>
 <p>Average pokemon weight: ${avgWeight};</p>
+<p>Pokemon with the highest average spawns: ${highestAvgSpawnsName} (${highestAvgSpawnsValue})</p>
 `;
 
 console.log(calculations);
