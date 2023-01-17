@@ -12,6 +12,10 @@ h1 {
     -webkit-text-stroke: 2px rgb(245, 184, 18);
     text-shadow: 5px 5px 5px blue;
 }
+h3 {
+    text-align: center;
+    color: white;
+}
 .pokemon {
     display: inline-block;
     background-color: rgb(14, 106, 211);
