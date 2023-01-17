@@ -1,0 +1,14 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.pokemon {
+    display: inline-block;
+    background-color: rgb(14, 106, 211);
+    width: 200px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+}
+.stats {
+    background-color: red;
+}
