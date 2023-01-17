@@ -58,6 +58,7 @@ for (let i = 0; i < data.pokemon.length; i++) {
 avgHeight = sumHeight/data.pokemon.length;
 avgWeight = sumWeight/data.pokemon.length;
 calculations += `<div class="stats">
+<h2>Pokedex general stats:</h2>
 <p>Number of pokemons: ${data.pokemon.length}</p>
 <p>Tallest pokemon: ${tallestName} (${tallestValue})</p>
 <p>Smallest pokemon: ${smallestName} (${smallestValue})</p>
