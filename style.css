@@ -27,5 +27,9 @@ img {
     background:url(background_prairie_pokemon.jpg);
 }
 .stats {
-    background-color: red;
+    display: block;
+    text-align: center;
+    background-color: rgb(223, 223, 223);
+    padding: 40px;
+    border-radius: 0px 0px 50px 50px;
 }
