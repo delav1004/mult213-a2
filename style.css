@@ -23,6 +23,7 @@ h3 {
     margin: 10px;
     padding: 20px;
     border-radius: 20px;
+    box-shadow: 4px 4px 6px grey;
 }
 .pokeInfo {
     display: block;
@@ -44,4 +45,5 @@ img {
     margin: 0px 10%;
     padding: 40px;
     border-radius: 0px 0px 50px 50px;
+    box-shadow: 4px 4px 6px grey;
 }
